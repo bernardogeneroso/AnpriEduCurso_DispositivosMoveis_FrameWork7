@@ -1,0 +1,136 @@
+<template>
+  <div class="page" data-name="contactos">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md"></span>
+          </a>
+        </div>
+        <div class="title">Contactos</div>
+      </div>
+    </div>
+
+    <!--FAB LeftTop (Yellow) -->
+    <div class="fab fab-right-bottom color-blue">
+      <a href="#" @click="toggleCheckBox">
+        <!--IconsFor iOS Theme-->
+        <i class="iconf7-icons if-not-md">+</i>
+        <i class="iconf7-icons if-not-md">X</i>
+        <!--IconsFor MD Theme-->
+        <i class="icon material-icon smd-only">+</i>
+        <i class="icon material-icon smd-only">X</i>
+      </a>
+      <!--FAB speed dial actions-->
+      <div class="fab-buttons fab-buttons-top">
+        <!-- Botão 1: Mail -->
+        <a href="#" id="mail" class="external">
+          <i class="material-icons">mail</i>
+        </a>
+        <!-- Botão 2: SMS -->
+        <a href="#" id="sms" class="external">
+          <i class="material-icons">sms</i>
+        </a>
+        <!-- Botão 3: Telefone -->
+        <a href="#" id="tel" class="external">
+          <i class="material-icons">phone</i>
+        </a>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="list media-list">
+        <ul>
+          <li>
+            <label class="item-checkbox item-content invisivel lista-checkbox">
+              <input type="checkbox" name="checkboxAlunos" />
+              <i class="icon icon-checkbox"></i>
+              <div class="item-inner">
+                <div class="item-title">Selecionar todos</div>
+              </div>
+            </label>
+            <ul style="padding-left: 0;">
+              {{#each listaContactos}}
+              <li>
+                <label
+                  class="item-checkbox item-content"
+                  style="justify-content: unset !important;"
+                >
+                  <input type="checkbox" name="checkboxAluno" value="{{Num}}" />
+                  <i class="icon icon-checkbox invisivel lista-checkbox"></i>
+                  <a
+                    href="/detalhes/{{title}}/{{uri}}/{{position}}/{{content.email}}/{{content.tel}}/{{content.sms}}/{{content.location.geo}}/{{content.location.name}}/"
+                    class="item-link item-content visivel lista-links"
+                  >
+                    <div class="item-media">
+                      <img
+                        style="width: 40px;"
+                        src="static/images/contactos/{{uri}}"
+                      />
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">{{title}}</div>
+                      </div>
+                      <div class="item-subtitle">N.º {{position}}</div>
+                    </div>
+                  </a>
+                </label>
+              </li>
+              {{/each}}
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <form id="my-form">
+        <ul style="padding-left: 0;">
+          {{#each listaContactos}}
+          <li>
+            <a
+              href="/detalhes/{{title}}/{{uri}}/{{position}}/{{content.email}}/{{content.tel}}/{{content.sms}}/{{content.location.geo}}/{{content.location.name}}/"
+              class="item-link item-content visivel lista-links"
+            >
+              <label
+                class="item-checkbox item-content invisivel lista-checkbox"
+              >
+                <input
+                  class="invisivel lista-checkbox"
+                  type="checkbox"
+                  name="checkboxAluno"
+                  value='{"Mail":"{{content.email}}", "Telemovel":"{{content.tel}}", "Telefone":"{{content.tel}}"}'
+                />
+                <i class="icon icon-checkbox invisivel lista-checkbox"></i>
+                <div class="item-media">
+                  <img
+                    style="width: 40px;"
+                    src="static/images/contactos/{{uri}}"
+                  />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">{{title}}</div>
+                  </div>
+                  <div class="item-subtitle">N.º {{position}}</div>
+                </div>
+              </label>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+  import $$ from "dom7";
+  export default {
+    methods: {
+      toggleCheckBox: function () {
+        $$(".lista-checkbox").toggleClass("visivel invisivel");
+      },
+    },
+  };
+</script>

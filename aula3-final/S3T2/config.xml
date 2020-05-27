@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id   = "org.devgirl.framework7.contactos" 
+Version   = "0.0.0" 
+xmlns     = "http://www.w3.org/ns/widgets" 
+xmlns:cdv = "http://cordova.apache.org/ns/1.0">
+    <name>Contactos</name>
+    <description>
+        Lista de Contactos
+    </description>
+    <author email="mail@dominio.pt" href="http://www.dominio.pt">
+        Nuno Barros / Vítor Costa
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <icon src="images/logoAnpr.png" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.4" />
+</widget>

@@ -1,0 +1,68 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md"></span>
+        </a>
+      </div>
+      <div class="title">Detalhes</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div style="display:flex;flex-direction: column;justify-content:center;align-items:center;margin-top: 50px">
+      <img src="static/images/contactos/{{$route.params.uri}}" width="120px" class="lazy lazy-fade-in demo-lazy" />
+      <label><strong>Nº {{$route.params.position}}, {{$route.params.title}}</strong></label>
+    </div>
+    <div class="list">
+      <ul>
+        <li>
+          <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="f7-icons">envelope</i></div>
+            <div class="item-inner">
+              <div class="item-title">
+                <div class="item-header">Mail</div>
+                {{$route.params.email}}
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="f7-icons">Telefone</i></div>
+            <div class="item-inner">
+              <div class="item-title">
+                <div class="item-header">Phone</div>
+                {{$route.params.tel}}
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="f7-icons">chat_bubble_text</i></div>
+            <div class="item-inner">
+              <div class="item-title">
+                <div class="item-header">SMS</div>
+                {{$route.params.sms}}
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="f7-icons">location_north_fill</i></div>
+            <div class="item-inner">
+              <div class="item-title">
+                <div class="item-header">Morada</div>
+                {{$route.params.name}}
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md"></span>
+          </a>
+        </div>
+        <div class="title">Contactos</div>
+      </div>
+    </div>
+    <div class="page-content">
+
+      <div class="list accordion-list">
+        <ul class="appendListItem">
+          {{#each listaContactos}}
+          <li class="list-item">
+            <a href="/detalhes/{{title}}/{{uri}}/{{position}}/{{content.email}}/{{content.tel}}/{{content.sms}}/{{content.location.geo}}/{{content.location.name}}/" class="item-content item-link">
+              <div class="item-media"><img style="width:40px" src="static/images/contactos/{{uri}}" /></div>
+              <div class="item-inner">
+                <div class="item-title row">
+                  <div class="item-title">{{title}}</div>
+                </div>
+                <div class="item-subtitle">N.º {{position}}</div>
+              </div>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</template>
+<script>
+  export default {};
+</script>

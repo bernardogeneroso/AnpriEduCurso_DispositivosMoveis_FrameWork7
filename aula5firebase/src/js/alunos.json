@@ -1,0 +1,57 @@
+{"alunos": [
+            {
+                "Num": "1",
+                "Nome": "Rato Mickey",
+                "Mail": "ratomickey@waltdisney.com",
+                "Telefone": "111111111",
+                "Telemovel": "961111111",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            },
+            {
+                "Num": "2",
+                "Nome": "Pateta",
+                "Mail": "pateta@waltdisney.com",
+                "Telefone": "222222222",
+                "Telemovel": "962222222",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            },
+            {
+                "Num": "3",
+                "Nome": "Pato Donald",
+                "Mail": "patodonal@waltdisney.com",
+                "Telefone": "333333333",
+                "Telemovel": "963333333",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            },
+            {
+                "Num": "4",
+                "Nome": "Minnie",
+                "Mail": "minnie@waltdisney.com",
+                "Telefone": "444444444",
+                "Telemovel": "964444444",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            },
+            {
+                "Num": "5",
+                "Nome": "Margarida",
+                "Mail": "margarida@waltdisney.com",
+                "Telefone": "555555555",
+                "Telemovel": "965555555",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            },
+            {
+                "Num": "6",
+                "Nome": "Pluto",
+                "Mail": "pluto@waltdisney.com",
+                "Telefone": "666666666",
+                "Telemovel": "966666666",
+                "Morada": "Walt Disney World",
+                "Coordenadas": "28.419052,-81.579484"
+            }
+        ]
+ }

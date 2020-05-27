@@ -1,0 +1,80 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md"></span>
+          </a>
+        </div>
+        <div class="title">Contactos</div>
+      </div>
+    </div>
+    <div class="page-content">
+
+      <div class="list accordion-list">
+        <ul class="appendListItem">
+          {{#each listaContactos}}
+          <li class="accordion-item">
+            <a href="#" class="item-content item-link">
+              <div class="item-media"><img src="static/images/contactos/{{uri}}" width="40px" class="lazy lazy-fade-in demo-lazy" /></div>
+              <div class="item-inner">
+                <div class="item-title row">
+                  <div class="item-title">{{title}}</div>
+                </div>
+                <div class="item-subtitle">N.º {{position}}</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="block">
+                <div class="list">
+                  <ul>
+                    <li>
+                      <a href="malito:{{content.email}}" class="item-link item-content external">
+                        <div class="item-content">
+                          <div class="item-media"><i class="f7-icons">envelope</i></div>
+                          <div class="item-inner">{{content.email}}</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:{{content.tel}}" class="item-link item-content external">
+                        <div class="item-content">
+                          <div class="item-media"><i class="f7-icons">phone</i></div>
+                          <div class="item-inner">{{content.tel}}</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="sms:{{content.sms}}" class="item-link item-content external">
+                        <div class="item-content">
+                          <div class="item-media"><i class="f7-icons">chat_bubble_text</i></div>
+                          <div class="item-inner">{{content.sms}}</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="geo:{{content.location.geo}}" class="item-link item-content external">
+                        <div class="item-content">
+                          <div class="item-media"><i class="f7-icons">location_north_fill</i></div>
+                          <div class="item-inner">{{content.location.name}}</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</template>
+<script>
+  export default {};
+</script>
